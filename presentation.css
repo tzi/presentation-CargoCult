@@ -1,0 +1,74 @@
+
+/* Slides
+ ====================================================*/
+body {
+    background: #111;
+    font-family: "Source Sans Pro";
+    color: #fff;
+}
+
+
+body section {
+    background-position: center center;
+    background-size: cover;
+    display: none;
+}
+
+body .bespoke-active {
+    display: table;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    font-size: 3em;
+    word-break: break-word;
+}
+
+body .content {
+    display: table-cell;
+    padding: 1em;
+    vertical-align: middle;
+    text-align: center;
+}
+
+
+/* Content styling
+ ====================================================*/
+.bespoke-slide h1 {
+    margin: 0;
+}
+.bespoke-slide blockquote {
+    font-family: Baskerville;
+    font-style: italic;
+    margin: 0;
+}
+.bespoke-slide blockquote small {
+    margin-top: 1em;
+    display: block;
+    text-align: right;
+}
+
+
+/* Utils for content
+ ====================================================*/
+body section .underline {
+    border-bottom: .1em solid white
+}
+
+body section .strikethrough {
+    text-decoration: line-through;
+    color: #999
+}
+
+body section .classy {
+    font-family: Baskerville;
+    font-style: italic;
+}
+
+body section .code {
+    font-family: "Source Code Pro";
+    font-size: .8125em;
+    font-weight: 700;
+    color: #0cf
+}
