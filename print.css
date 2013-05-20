@@ -1,0 +1,12 @@
+
+/* Slides
+ ====================================================*/
+section,
+.bespoke-slide {
+    display: table;
+    position: static;
+    page-break-after: always;
+}
+.content {
+    height: 165mm;
+}

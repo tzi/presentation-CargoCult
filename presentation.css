@@ -5,27 +5,27 @@ body {
     background: #111;
     font-family: "Source Sans Pro";
     color: #fff;
+    margin: 0;
+    padding: 0;
 }
 
-
-body section {
+section {
     background-position: center center;
     background-size: cover;
+    font-size: 3em;
+    width: 100%;
     display: none;
 }
 
-body .bespoke-active {
+.bespoke-active {
     display: table;
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
-    width: 100%;
-    font-size: 3em;
-    word-break: break-word;
 }
 
-body .content {
+.content {
     display: table-cell;
     padding: 1em;
     vertical-align: middle;
@@ -57,7 +57,7 @@ body .content {
     list-style-type: none;
 }
 
-body section a {
+section a {
     font-weight: 700;
     color: #0cf;
     text-decoration: none;
@@ -66,21 +66,21 @@ body section a {
 
 /* Utils for content
  ====================================================*/
-body section .underline {
+section .underline {
     border-bottom: .1em solid white
 }
 
-body section .strikethrough {
+section .strikethrough {
     text-decoration: line-through;
     color: #999
 }
 
-body section .classy {
+section .classy {
     font-family: Baskerville;
     font-style: italic;
 }
 
-body section .code {
+section .code {
     font-family: "Source Code Pro";
     font-size: .8125em;
     font-weight: 700;
