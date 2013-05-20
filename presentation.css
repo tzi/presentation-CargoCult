@@ -35,7 +35,8 @@ body .content {
 
 /* Content styling
  ====================================================*/
-.bespoke-slide h1 {
+.bespoke-slide h1,
+.bespoke-slide h2 {
     margin: 0;
 }
 .bespoke-slide blockquote {
@@ -47,6 +48,19 @@ body .content {
     margin-top: 1em;
     display: block;
     text-align: right;
+}
+.bespoke-slide ul {
+    font-size: 0.8em;
+    text-align: left;
+    display: inline-block;
+    margin: 0 auto;
+    list-style-type: none;
+}
+
+body section a {
+    font-weight: 700;
+    color: #0cf;
+    text-decoration: none;
 }
 
 
