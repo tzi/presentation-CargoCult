@@ -136,35 +136,25 @@
       makePluginForAxis = function(axis) {
           return function(deck) {
               var startPosition,
-                delta,
-                keys = {
-                    SPACE: 32,
-                    PAGE_UP: 33,
-                    PAGE_DOWN: 34,
-                    LEFT: 37,
-                    TOP: 38,
-                    RIGHT: 39,
-                    BOTTOM: 40
-                }
+                delta;
 
               document.addEventListener('keydown', function(e) {
-                  var key = e.which;
-                  if (
-                    key === keys.PAGE_UP ||
-                      (e.shiftKey && key === keys.SPACE) ||
-                      (axis === 'X' && key === keys.LEFT) ||
-                      (axis === 'Y' && key === keys.TOP)
-
-                    ) {
-                      deck.prev();
-                  } else if (
-                    key === keys.PAGE_DOWN ||
-                      key === keys.SPACE ||
-                      (axis === 'X' && key === keys.RIGHT) ||
-                      (axis === 'Y' && key === keys.BOTTOM)
-                    ) {
-                      deck.next();
+                  if (document.activeElement.hasAttribute('contenteditable')) {
+                    return;
                   }
+                  var key = e.which;
+
+                  (
+                    key === 34 || // PAGE DOWN
+                      key === 32 || // SPACE
+                      axis === 'X' && key === 39 || // RIGHT
+                      axis === 'Y' && key === 40 // BOTTOM
+                    ) && deck.next();
+                  (
+                    key === 33 || // PAGE UP
+                      axis === 'X' && key === 37 || // LEFT
+                      axis === 'Y' && key === 38 // TOP
+                    ) && deck.prev();
               });
 
               deck.parent.addEventListener('touchstart', function(e) {
